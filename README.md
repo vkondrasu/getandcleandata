@@ -39,4 +39,23 @@ Example : cameradata <- read.table("./data/camera.csv", sep=",", header = TRUE)
 Example:  fileUrl <- ""
           download.file(fileUrl, destfile="./data/camera.csv", method="curl)
           list.files("./data")
+          
+##Reading JSON
+
+library(jsonlite)
+jsondata <- fromJSON("")
+names(jsondata)
+
+##data.table package
+
+Inherits from data.frame package
+Much much faster at subsetting, grouping and updating
+
+library(data.table)
+
+DF <- data.frame(x=rnorm(9), y=rep(c("a","b","c"), each=3), z=rnorm(9))
+head(DF,3)
+
+DT <- data.table(x=rnorm(9), y=rep(c("a","b","c"), each=3), z=rnorm(9))
+head(DT,3)
 
